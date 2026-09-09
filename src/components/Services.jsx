@@ -15,7 +15,9 @@ const Services = () => {
 
       <div className='section-center services-center'>
         {servicesData.map((service) => {
-          return <Service {...service} key={service.id} />
+          return <Service {...service} key={service.id} item = {servicesData} onDelete={handleServicesDataChange}/>
+          
+          
         })}
       </div>
     </section>
