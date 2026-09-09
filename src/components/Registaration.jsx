@@ -8,10 +8,31 @@ function Registration() {
   const [confirm_password, setConfirmPassword] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
 
+   const onSubmit = e => {
+    e.preventDefault();
+
+    const regristrationInformation = {
+      name,
+      email,
+      password,
+      confirm_password,
+      phone_number,
+      submittedOn: new Date()
+    };
+
+    console.log(regristrationInformation);
+
+    setName('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setPhoneNumber('');
+  };
+
   return (
     <div>
         <h2>registration</h2>
-        <form>
+        <form onSubmit={onSubmit}>
             <div>
           <label htmlFor='name'>Name:</label>
           <input
@@ -62,6 +83,7 @@ function Registration() {
             value={phone_number}
           />
         </div>
+        <button>Submit</button>
         </form>
     </div>
   );
