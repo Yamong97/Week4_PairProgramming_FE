@@ -15,7 +15,7 @@ const Tours = () => {
 
       <div className="section-center featured-center">
         {toursData.map((tour) => {
-          return <Tour key={tour.id} {...tour} />;
+          return <Tour key={tour.id} {...tour} onDelete={handleToursDataChange} items={toursData} />;
         })}
       </div>
     </section>

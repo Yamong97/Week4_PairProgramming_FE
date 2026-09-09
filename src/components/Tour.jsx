@@ -1,4 +1,7 @@
-function Tour({ image, date, title, info, location, duration, cost, difficulty, rating }) {
+function Tour({ id, onDelete,image, date, title, info, location, duration, cost, difficulty, rating }) {
+  const handleDelete = () => {
+    onDelete(id);
+  }
   return (
     <article className="tour-card">
       <div className="tour-img-container">
@@ -23,6 +26,7 @@ function Tour({ image, date, title, info, location, duration, cost, difficulty, 
           <p>{duration} days</p>
         </div>
       </div>
+      <button className='btn' onClick={handleDelete}>Delete</button>
     </article>
   );
 }
