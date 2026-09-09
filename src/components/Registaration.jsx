@@ -30,11 +30,15 @@ function Registration() {
   };
 
   return (
-    <div>
+    <div className='registration-page'>
+        <div className='registration-card'>
         <h2>registration</h2>
+        
         <form onSubmit={onSubmit}>
             <div>
-          <label htmlFor='name'>Name:</label>
+          <label htmlFor='name' >
+            Name:
+          </label>
           <input
             id='name'
             type='text'
@@ -85,6 +89,7 @@ function Registration() {
         </div>
         <button>Submit</button>
         </form>
+        </div>
     </div>
   );
 }
