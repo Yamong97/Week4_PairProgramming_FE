@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Registration from "./components/Registaration";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/register" element={<Registration />} />
       </Routes>
       <Footer />
     </BrowserRouter>
